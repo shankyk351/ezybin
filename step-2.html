@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+
+    <title>EzyBin</title>
+  </head>
+  <body>
+
+    <header class="container">
+      <div class="header-container">
+        <div class="logo">
+          <a href="#">
+            <img height="35" class="img-responsive" src="assets/images/logo.png" alt="">
+          </a>
+        </div>
+        <div class="menu-items">
+          <div onclick="openNav()">
+            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-list d-lg-none ham" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+          </div>
+          <ul class="menu-list d-none d-lg-flex">
+            <li class="menu-list-item">
+              <a class="active" href="#">Home</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="#">About Us</a>
+            </li>
+            <li class="menu-list-item">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="menu-list-item driver-zone">
+              <a href="#" class="btn btn-primary btn-link shadow">Driver Zone</a>
+            </li>
+            <li class="menu-list-item manager-login">
+              <a href="#" class="btn btn-primary btn-link shadow">Manager Zone</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="mySidenav" class="sidenav bg-light">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <ul class="sidenav-list">
+          <li class="sidenav-list-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="sidenav-list-item">
+            <a href="#">About Us</a>
+          </li>
+          <li class="sidenav-list-item">
+            <a href="#">Contact Us</a>
+          </li>
+          <li class="sidenav-list-item">
+            <a href="#">Driver Zone</a>
+          </li>
+          <li class="sidenav-list-item">
+            <a href="#">Manager Zone</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <section>
+      <div class="banner-container billing-detail">
+        <h2 class="text-uppercase">Book Skip Bin</h2>
+        <h4>Select Bin Size</h4>
+      </div>
+    </section>
+
+    <div class="container mt-5 mb-100">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="bin-card">
+                <h1 class="font-bold">2m<sup>3</sup></h1>
+                <h4 class="grey font-bold">Mixed Light Load</h4>
+                <img class="my-3 img-fluid" src="assets/images/asset-1.png" alt="">
+                <ul class="bin-card-list">
+                  <li>
+                    <p class="m-0 grey">Dimensions: 2.1m x 1.2m x 1.2m</p>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" id="slide-toggle" class="grey font-medium bin-card-link slide-toggle">Description <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="desc-detail">
+                      <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quisquam unde velit in. Sit, aliquam explicabo.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="grey font-medium bin-card-link slide-toggle">Additional Charge Items <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="charge-item-detail">
+                      <ul class="charge-item-list mt-3">
+                        <li>
+                          <p><span class="charge-strong">Mattress</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Car Types</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Larger Types</span> : POA</p>
+                        </li>
+                      </ul>
+                      <p class="mt-2">NOTE: Overloaded bins will also incur additional charges.</p>
+                    </div>
+                  </li>
+                </ul>
+                <h2 class="text-primary my-4 font-bold">$295</h2>
+                <div class="col">
+                  <button class="btn btn-block btn-primary">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="bin-card">
+                <h1 class="font-bold">2m<sup>3</sup></h1>
+                <h4 class="grey font-bold">Mixed Light Load</h4>
+                <img class="my-3 img-fluid" src="assets/images/asset-1.png" alt="">
+                <ul class="bin-card-list">
+                  <li>
+                    <p class="m-0 grey">Dimensions: 2.1m x 1.2m x 1.2m</p>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" id="slide-toggle" class="grey font-medium bin-card-link slide-toggle">Description <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="desc-detail">
+                      <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quisquam unde velit in. Sit, aliquam explicabo.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="grey font-medium bin-card-link slide-toggle">Additional Charge Items <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="charge-item-detail">
+                      <ul class="charge-item-list mt-3">
+                        <li>
+                          <p><span class="charge-strong">Mattress</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Car Types</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Larger Types</span> : POA</p>
+                        </li>
+                      </ul>
+                      <p class="mt-2">NOTE: Overloaded bins will also incur additional charges.</p>
+                    </div>
+                  </li>
+                </ul>
+                <h2 class="text-primary my-4 font-bold">$295</h2>
+                <div class="col">
+                  <button class="btn btn-block btn-primary">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="bin-card">
+                <h1 class="font-bold">2m<sup>3</sup></h1>
+                <h4 class="grey font-bold">Mixed Light Load</h4>
+                <img class="my-3 img-fluid" src="assets/images/asset-1.png" alt="">
+                <ul class="bin-card-list">
+                  <li>
+                    <p class="m-0 grey">Dimensions: 2.1m x 1.2m x 1.2m</p>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" id="slide-toggle" class="grey font-medium bin-card-link slide-toggle">Description <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="desc-detail">
+                      <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quisquam unde velit in. Sit, aliquam explicabo.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="grey font-medium bin-card-link slide-toggle">Additional Charge Items <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="charge-item-detail">
+                      <ul class="charge-item-list mt-3">
+                        <li>
+                          <p><span class="charge-strong">Mattress</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Car Types</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Larger Types</span> : POA</p>
+                        </li>
+                      </ul>
+                      <p class="mt-2">NOTE: Overloaded bins will also incur additional charges.</p>
+                    </div>
+                  </li>
+                </ul>
+                <h2 class="text-primary my-4 font-bold">$295</h2>
+                <div class="col">
+                  <button class="btn btn-block btn-primary">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="bin-card">
+                <h1 class="font-bold">2m<sup>3</sup></h1>
+                <h4 class="grey font-bold">Mixed Light Load</h4>
+                <img class="my-3 img-fluid" src="assets/images/asset-1.png" alt="">
+                <ul class="bin-card-list">
+                  <li>
+                    <p class="m-0 grey">Dimensions: 2.1m x 1.2m x 1.2m</p>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" id="slide-toggle" class="grey font-medium bin-card-link slide-toggle">Description <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="desc-detail">
+                      <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quisquam unde velit in. Sit, aliquam explicabo.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="grey font-medium bin-card-link slide-toggle">Additional Charge Items <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="charge-item-detail">
+                      <ul class="charge-item-list mt-3">
+                        <li>
+                          <p><span class="charge-strong">Mattress</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Car Types</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Larger Types</span> : POA</p>
+                        </li>
+                      </ul>
+                      <p class="mt-2">NOTE: Overloaded bins will also incur additional charges.</p>
+                    </div>
+                  </li>
+                </ul>
+                <h2 class="text-primary my-4 font-bold">$295</h2>
+                <div class="col">
+                  <button class="btn btn-block btn-primary">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="bin-card">
+                <h1 class="font-bold">2m<sup>3</sup></h1>
+                <h4 class="grey font-bold">Mixed Light Load</h4>
+                <img class="my-3 img-fluid" src="assets/images/asset-1.png" alt="">
+                <ul class="bin-card-list">
+                  <li>
+                    <p class="m-0 grey">Dimensions: 2.1m x 1.2m x 1.2m</p>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" id="slide-toggle" class="grey font-medium bin-card-link slide-toggle">Description <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="desc-detail">
+                      <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quisquam unde velit in. Sit, aliquam explicabo.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="grey font-medium bin-card-link slide-toggle">Additional Charge Items <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="charge-item-detail">
+                      <ul class="charge-item-list mt-3">
+                        <li>
+                          <p><span class="charge-strong">Mattress</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Car Types</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Larger Types</span> : POA</p>
+                        </li>
+                      </ul>
+                      <p class="mt-2">NOTE: Overloaded bins will also incur additional charges.</p>
+                    </div>
+                  </li>
+                </ul>
+                <h2 class="text-primary my-4 font-bold">$295</h2>
+                <div class="col">
+                  <button class="btn btn-block btn-primary">Book Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="bin-card">
+                <h1 class="font-bold">2m<sup>3</sup></h1>
+                <h4 class="grey font-bold">Mixed Light Load</h4>
+                <img class="my-3 img-fluid" src="assets/images/asset-1.png" alt="">
+                <ul class="bin-card-list">
+                  <li>
+                    <p class="m-0 grey">Dimensions: 2.1m x 1.2m x 1.2m</p>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" id="slide-toggle" class="grey font-medium bin-card-link slide-toggle">Description <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="desc-detail">
+                      <p class="desc-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quisquam unde velit in. Sit, aliquam explicabo.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" class="grey font-medium bin-card-link slide-toggle">Additional Charge Items <img class="arrow-down" src="assets/images/icons/path-2.png" alt=""></a>
+                    <div class="charge-item-detail">
+                      <ul class="charge-item-list mt-3">
+                        <li>
+                          <p><span class="charge-strong">Mattress</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Car Types</span> : $75 each</p>
+                        </li>
+                        <li>
+                          <p><span class="charge-strong">Larger Types</span> : POA</p>
+                        </li>
+                      </ul>
+                      <p class="mt-2">NOTE: Overloaded bins will also incur additional charges.</p>
+                    </div>
+                  </li>
+                </ul>
+                <h2 class="text-primary my-4 font-bold">$295</h2>
+                <div class="col">
+                  <button class="btn btn-block btn-primary">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-bg-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="#">
+                  <img height="35" src="assets/images/logo.png" alt="">
+                </a>
+                <div class="mt-4">
+                  <a href="mailto: hello@email.com" class="footer-email">hello@email.com</a>
+                  <p class="blue">But Brooke Chaffin and Catherine Connors are looking to change that with the introduction of Maverick.</p>
+                </div>
+              </div>
+              <div class="col-md-3 col-lg-3 offset-lg-1">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="quick-links">
+                  <li>
+                    <a href="#">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="#">Driver Zone</a>
+                  </li>
+                  <li>
+                    <a href="#">Manager Login</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-5 col-lg-4">
+                <div class="subscribe">
+                  <h4 class="footer-title">Subscribe now</h4>
+                  <p class="grey">Get all latest news and offers direct in your article</p>
+                </div>
+                <div class="footer-email-subscribe">
+                  <input type="text" class="form-control footer-sub-input" placeholder="Your email address">
+                  <button class="btn btn-primary footer-sub-btn">Subscribe</button>
+                </div>
+                <ul class="footer-social-icons mt-4">
+                  <li>
+                    <a href="#">
+                      <img src="assets/images/icons/instagram.png" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="assets/images/icons/twitter.png" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+      <section class="container">
+        <div class="footer-bg-bottom row align-items-center">
+          <div class="col-md-6">
+            <p class="copyrights">Copyrights &#169;skipbin all rights reserved</p>
+          </div>
+          <div class="terms col-md-6">
+            <ul class="terms-list">
+              <li><a href="#">Terms & Condition</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+
+    <!-- <script src="assets/js/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.slide-toggle').click(function(){
+          $(this).next().slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
