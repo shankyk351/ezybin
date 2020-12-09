@@ -8,8 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/woff2.css" media="all">
+    <link rel="stylesheet" href="assets/css/datepicker.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>EzyBin</title>
   </head>
@@ -79,22 +81,52 @@
     <div class="container mt-5 mb-100">
       <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="btn-group w-100">
-              <button class="btn btn-primary btn-lg active">Drop Off</button>
-              <button class="btn btn-primary btn-lg">Pick Up</button>
-            </div>
+            <section class="template-order">
+              <div class="delivery-date drop-off">
+                <div class="tabs btn-group w-100 d-flex">
+                  <button class="btn btn-primary btn-block btn-lg active drop-off">
+                    Drop Off
+                    <span>Change</span>
+                  </button>
+                  <button class="btn btn-primary btn-block mt-0 btn-lg pick-up">
+                    Pick Up
+                    <span>Change</span>
+                  </button>
+                </div>
+                <div class="calendars">
+                  <div id="inline-start"></div>
+                  <div id="inline-finish"></div>
+                  <div class="overview">
+                    <span class="overview-drop">Drop Off : </span><br />
+                    <span class="overview-pick-up">Pick Up : </span>
+                  </div>
+                </div>
+              </div>
+            </section>
             <form>
               <div class="row mt-5">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Drop off Window</label>
-                    <input type="text" class="form-control" placeholder="Enter Drop off time">
+                    <select id="drop-off-window" name="required" class="valid form-control">
+											<option value="0" selected="" disabled="">...</option>
+											<option value="7:00am - 7:30am">7:00am - 7:30am</option>
+                      <option value="8:30am - 9:00am">8:30am - 9:00am</option>
+                      <option value="10:00am - 12:00pm">10:00am - 12:00pm</option>
+                      <option value="12:00pm - 2:00pm">12:00pm - 2:00pm</option>
+                      <option value="2:00pm - 4:00pm">2:00pm - 4:00pm</option>
+                    </select>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="">Where is the bin being placed?</label>
-                    <input type="text" class="form-control" placeholder="Enter details">
+                    <select id="bin-placement" name="required" class="valid form-control">
+											<option value="0" selected="" disabled="">...</option>
+											<option value="private-property">Private Property</option>
+                      <option value="road">Road</option>
+                      <option value="nature-strip">Nature Strip</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -201,8 +233,59 @@
       </section>
     </footer>
 
-    <script src="assets/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+	  <script type="text/javascript" src="assets/js/jquery.maskedinput.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+      $(function() {
+        $('.tabs .drop-off').click(function(){
+          $('.delivery-date').addClass('drop-off').removeClass('pick-up');
+        });
+        
+        $('.tabs .pick-up').click(function(){
+          $('.delivery-date').removeClass('drop-off').addClass('pick-up');
+        });
+      
+        var dateToday = new Date();
+        // Inline date range
+        $('#inline-start').datepicker({
+          dateFormat: 'dd.mm.yy',
+          prevText: '<i class="fa fa-chevron-left"></i>',
+          nextText: '<i class="fa fa-chevron-right"></i>',
+          minDate: dateToday,
+                beforeShowDay: function(date) {
+            var day = date.getDay();
+            return [(day != 0), ''];
+          },
+          onSelect: function( selectedDate )
+          {
+            $('#inline-finish').datepicker('option', 'minDate', selectedDate);
+            $('.delivery-date').removeClass('drop-off').addClass('pick-up');
+            $('.overview .overview-drop').html('<strong>Drop Off:</strong> ' + selectedDate);
+            $('.tabs .drop-off span').html(selectedDate + " (Change)");
+            
+          }
+        });
+        
+        $('#inline-finish').datepicker({
+          dateFormat: 'dd.mm.yy',
+          prevText: '<i class="fa fa-chevron-left"></i>',
+          nextText: '<i class="fa fa-chevron-right"></i>',
+                beforeShowDay: function(date) {
+            var day = date.getDay();
+            return [(day != 0), ''];
+          },
+          onSelect: function( selectedDate )
+          {
+            $('#inline-start').datepicker('option', 'maxDate', selectedDate);
+            $('.delivery-date').removeClass('drop-off').removeClass('pick-up');
+            $('.overview .overview-pick-up').html('<strong>Pick Up:</strong> ' + selectedDate);
+            $('.tabs .pick-up span').html(selectedDate + " (Change)");
+          }
+        });
+      });	
+	</script>
   </body>
 </html>

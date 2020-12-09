@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+	
+<head>
+	<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.maskedinput.min.js"></script>
+	<link rel="stylesheet" href="./css/woff2.css" media="all">
+	<link href="./css/sky-forms.css" rel="stylesheet">
+	<link href="./css/core.css" rel="stylesheet">
+</head>
+<body class="template-order">
+	<h5>Drop Off &amp; Pick Up Date</h5>
+	<section>
+		<div class="delivery-date drop-off">
+			<div class="tabs">
+				<div class="drop-off">
+					Drop Off
+					<span>Change</span>
+				</div>
+				<div class="pick-up">
+					Pick Up
+					<span>Change</span>
+				</div>
+			</div>
+			<div class="calendars">
+				<div id="inline-start"></div>
+				<div id="inline-finish"></div>
+				<div class="overview">
+					<span class="overview-drop">Drop Off: </span><br />
+					<span class="overview-pick-up">Pick Up: </span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script type="text/javascript">
+		
+		$(function() {
+			$('.tabs .drop-off').click(function(){
+				$('.delivery-date').addClass('drop-off').removeClass('pick-up');
+			});
+			
+			$('.tabs .pick-up').click(function(){
+				$('.delivery-date').removeClass('drop-off').addClass('pick-up');
+			});
+		
+			var dateToday = new Date();
+			// Inline date range
+			$('#inline-start').datepicker({
+				dateFormat: 'dd.mm.yy',
+				prevText: '<i class="fa fa-chevron-left"></i>',
+				nextText: '<i class="fa fa-chevron-right"></i>',
+				minDate: dateToday,
+							beforeShowDay: function(date) {
+					var day = date.getDay();
+					return [(day != 0), ''];
+				},
+				onSelect: function( selectedDate )
+				{
+					$('#inline-finish').datepicker('option', 'minDate', selectedDate);
+					$('.delivery-date').removeClass('drop-off').addClass('pick-up');
+					$('.overview .overview-drop').html('<strong>Drop Off:</strong> ' + selectedDate);
+					$('.tabs .drop-off span').html(selectedDate + " (Change)");
+					
+				}
+			});
+			
+			$('#inline-finish').datepicker({
+				dateFormat: 'dd.mm.yy',
+				prevText: '<i class="fa fa-chevron-left"></i>',
+				nextText: '<i class="fa fa-chevron-right"></i>',
+							beforeShowDay: function(date) {
+					var day = date.getDay();
+					return [(day != 0), ''];
+				},
+				onSelect: function( selectedDate )
+				{
+					$('#inline-start').datepicker('option', 'maxDate', selectedDate);
+					$('.delivery-date').removeClass('drop-off').removeClass('pick-up');
+					$('.overview .overview-pick-up').html('<strong>Pick Up:</strong> ' + selectedDate);
+					$('.tabs .pick-up span').html(selectedDate + " (Change)");
+				}
+			});
+		});	
+		
+		
+		
+	</script>
+
+</body>
+</html>

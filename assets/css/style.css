@@ -121,7 +121,14 @@ dt{color: #444;font-weight: 600;margin-top: 20px;}
 /* /step 2 */
 
 /* lock time */
-.btn-primary.active{background-color: #0069d9;border-color: #0062cc;}
+.overview{color: #666;text-align: center;}
+.tabs.btn-group .btn.btn-primary{border-radius: 0;font-weight: 100;padding: 15px 20px;}
+.template-order .delivery-date button.btn-primary{font-size: 18px;font-weight: 100;}
+.template-order .delivery-date button.btn-primary span{font-size: 12px;}
+.template-order .delivery-date.drop-off .tabs .drop-off, 
+.template-order .delivery-date.pick-up .tabs .pick-up, 
+.template-account-order .delivery-date.drop-off .tabs .drop-off, 
+.template-account-order .delivery-date.pick-up .tabs .pick-up{background-color: #0069d9;border-color: #0069d9;}
 /* /lock time */
 
 /* billing detail */
