@@ -261,9 +261,10 @@
           },
           onSelect: function( selectedDate )
           {
+            let dropInput = `<input id="drop-value" type="hidden" value=${selectedDate}>`;
             $('#inline-finish').datepicker('option', 'minDate', selectedDate);
             $('.delivery-date').removeClass('drop-off').addClass('pick-up');
-            $('.overview .overview-drop').html('<strong>Drop Off:</strong> ' + selectedDate);
+            $('.overview .overview-drop').html('<strong>Drop Off:</strong> ' + selectedDate + dropInput);
             $('.tabs .drop-off span').html(selectedDate + " (Change)");
             
           }
@@ -279,9 +280,10 @@
           },
           onSelect: function( selectedDate )
           {
+            let pickupInput = `<input id="pickup-value" type="hidden" value=${selectedDate}>`;
             $('#inline-start').datepicker('option', 'maxDate', selectedDate);
             $('.delivery-date').removeClass('drop-off').removeClass('pick-up');
-            $('.overview .overview-pick-up').html('<strong>Pick Up:</strong> ' + selectedDate);
+            $('.overview .overview-pick-up').html('<strong>Pick Up:</strong> ' + selectedDate + pickupInput);
             $('.tabs .pick-up span').html(selectedDate + " (Change)");
           }
         });
