@@ -99,10 +99,10 @@
 
 ************************/
 
-.template-order .delivery-date.drop-off .tabs .drop-off, .template-order .delivery-date.pick-up .tabs .pick-up, .template-account-order .delivery-date.drop-off .tabs .drop-off, .template-account-order .delivery-date.pick-up .tabs .pick-up {
+/* .template-order .delivery-date.drop-off .tabs .drop-off, .template-order .delivery-date.pick-up .tabs .pick-up, .template-account-order .delivery-date.drop-off .tabs .drop-off, .template-account-order .delivery-date.pick-up .tabs .pick-up {
 	background:green;
 	color:#ffffff;
-}
+} */
 
 .template-order .delivery-date .tabs .drop-off span, .template-order .delivery-date .tabs .pick-up span, .template-account-order .delivery-date .tabs .drop-off span, .template-account-order .delivery-date .tabs .pick-up span {
 	display:block;

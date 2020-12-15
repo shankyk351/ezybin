@@ -16,58 +16,58 @@
   <body>
 
     <header class="container">
-      <div class="header-container">
-        <div class="logo">
-          <a href="#">
-            <img height="35" class="img-responsive" src="assets/images/logo.png" alt="">
-          </a>
-        </div>
-        <div class="menu-items">
-          <div onclick="openNav()">
-            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-list d-lg-none ham" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
+      <div class="row align-items-center">
+        <div class="col-sm-2">
+          <div class="menu-items">
+            <div onclick="openNav()">
+              <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-list ham" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+              </svg>
+            </div>
           </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="header-container text-center">
+            <div class="logo">
+              <a href="#">
+                <img height="35" class="img-responsive" src="assets/images/logo.png" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
           <ul class="menu-list d-none d-lg-flex">
-            <li class="menu-list-item">
-              <a class="active" href="#">Home</a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#">About Us</a>
-            </li>
-            <li class="menu-list-item">
-              <a href="#">Contact Us</a>
-            </li>
             <li class="menu-list-item driver-zone">
-              <a href="#" class="btn btn-primary btn-link shadow">Driver Zone</a>
+              <a href="#">Driver Zone</a>
             </li>
             <li class="menu-list-item manager-login">
-              <a href="#" class="btn btn-primary btn-link shadow">Manager Zone</a>
+              <a href="#">Manager Zone</a>
             </li>
           </ul>
         </div>
       </div>
-      <div id="mySidenav" class="sidenav bg-light">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <ul class="sidenav-list">
-          <li class="sidenav-list-item">
-            <a href="#">Home</a>
-          </li>
-          <li class="sidenav-list-item">
-            <a href="#">About Us</a>
-          </li>
-          <li class="sidenav-list-item">
-            <a href="#">Contact Us</a>
-          </li>
-          <li class="sidenav-list-item">
-            <a href="#">Driver Zone</a>
-          </li>
-          <li class="sidenav-list-item">
-            <a href="#">Manager Zone</a>
-          </li>
-        </ul>
-      </div>
     </header>
+
+    <section id="mySidenav" class="sidenav bg-light">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul class="sidenav-list">
+        <li class="sidenav-list-item">
+          <a href="#">Home</a>
+        </li>
+        <li class="sidenav-list-item">
+          <a href="#">About Us</a>
+        </li>
+        <li class="sidenav-list-item">
+          <a href="#">Contact Us</a>
+        </li>
+        <li class="sidenav-list-item">
+          <a href="#">Driver Zone</a>
+        </li>
+        <li class="sidenav-list-item">
+          <a href="#">Manager Zone</a>
+        </li>
+      </ul>
+    </section>
 
     <div class="container">
         <div class="my-5">
@@ -180,6 +180,7 @@
         </div>
       </section>
     </footer>
+<div class="overlay"></div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
