@@ -76,7 +76,9 @@ header{position: fixed;background: #fff;min-width: 100%;z-index: 999;top: 0;bord
 /* /Hamburger */
 
 /* Banner */
-.banner-container{padding: 100px 20px 70px;text-align: center;color: #fff;}
+.banner-container{padding: 100px 20px 70px;text-align: center;color: #fff;position: relative;}
+.banner-container:before{position: absolute;left: 0;right: 0; top: 0; bottom: 0;
+                         background: rgba(0,0,0,0.4); content: ''; width: 100%;}
 .homepage-banner, .billing-detail{background: url('../images/homepage_banner.png') no-repeat center center/cover;}
 .driver-page-banner{padding: 150px 20px;background: url('../images/driverpage-banner.png') no-repeat center center/cover;}
 .manager-page-banner{padding: 150px 20px;background: url('../images/manager-page-banner.png') no-repeat center center/cover;}
@@ -155,7 +157,7 @@ header{position: fixed;background: #fff;min-width: 100%;z-index: 999;top: 0;bord
 .choose-card{text-align: center;background-color: #fff;box-shadow: 5px 5px 30px #ddd;padding: 20px 15px 30px;margin-bottom: 30px;}
 .ch-img-wrap{height: 80px;width: 80px;border-radius: 50%;border: 1px solid #026FC2;
              display: flex;align-items: center;justify-content: center;margin: 20px auto;background-color: #f8f8f8;}
-.ch-img{font-size: 30px;color: #0069d9;}
+.ch-img{font-size: 30px;color: #3b3f44;}
 .ch-card-text{color: #aaa;}
 .btn-shadow{box-shadow: 5px 5px 20px #aaa;}
 .about-count{border-top: 2px solid #eee;border-bottom: 2px solid #eee;text-align: center;background-color: #f8f8f8;padding: 50px 20px 10px;}
@@ -173,9 +175,9 @@ header{position: fixed;background: #fff;min-width: 100%;z-index: 999;top: 0;bord
 
 /* Home Page */
 .home-search input.form-control{font-size: 16px;}
-.home-search .input-group-append button.btn-primary{font-size: 16px;padding-left: 50px;padding-right: 50px;margin-left: 4px;}
-.input-group.home-search .form-control.address-input{margin-right: 2px;}
-.home-search .form-control.location-select{margin-left: 2px;font-size: 16px;}
+.home-search .input-group-append button.btn-primary{font-size: 16px;padding-left: 50px;padding-right: 50px;}
+.input-group.home-search .form-control.address-input{border-right: 4px solid #026FC2;}
+.home-search .form-control.location-select{font-size: 16px;}
 .quote-number{font-size: 38px;color: #0062cc;}
 .bin-step{background-color: #eef2f4;padding: 20px 25px 30px;margin-top: 150px;color: #777;}
 .step-detail{font-size: 14px;}
@@ -247,7 +249,7 @@ header{position: fixed;background: #fff;min-width: 100%;z-index: 999;top: 0;bord
     .section-left{padding-right: 0;border-right: 0;border-bottom: 1px solid #ddd;padding-bottom: 40px;margin-bottom: 40px;}
     .section-right{padding-left: 0;}
     .banner-container{padding: 50px 10px;}
-    .input-group.home-search .form-control.address-input{width: 100%;margin-bottom: 15px;margin-right: 0;
+    .input-group.home-search .form-control.address-input{width: 100%;margin-bottom: 15px;border-right: 0;
                           border-top-left-radius: 0;border-bottom-left-radius: 0;text-align: left;}
     .home-search .form-control.location-select{width: 100%;margin-bottom: 15px;margin-left: 0;}
     .home-search input{text-align: center;}
