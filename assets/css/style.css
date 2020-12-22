@@ -78,7 +78,7 @@ header{position: fixed;background: #fff;min-width: 100%;z-index: 999;top: 0;bord
 /* Banner */
 .banner-container{padding: 100px 20px 70px;text-align: center;color: #fff;position: relative;}
 .banner-container:before{position: absolute;left: 0;right: 0; top: 0; bottom: 0;
-                         background: rgba(0,0,0,0.4); content: ''; width: 100%;}
+                         background: rgba(0,0,0,0.7); content: ''; width: 100%;}
 .homepage-banner, .billing-detail{background: url('../images/homepage_banner.png') no-repeat center center/cover;}
 .driver-page-banner{padding: 150px 20px;background: url('../images/driverpage-banner.png') no-repeat center center/cover;}
 .manager-page-banner{padding: 150px 20px;background: url('../images/manager-page-banner.png') no-repeat center center/cover;}
