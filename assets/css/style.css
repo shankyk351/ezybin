@@ -42,7 +42,7 @@ dt{color: #444;font-weight: 600;margin-top: 20px;}
 /* /generic */
 
 /* alert */
-.alert{background-color: #026FC2;color: #fff;display: none;position: fixed;top: 0;width: 100%;border: 0;border-radius: 0;}
+.alert{background-color: #026FC2;color: #fff;display: none;position: fixed;top: 0;width: 100%;border: 0;border-radius: 0;z-index: 1000;}
 .alert .close:not(:disabled):not(.disabled):focus, 
 .alert .close:not(:disabled):not(.disabled):hover:hover{color: #fff;opacity: 1;}
 /* /alert */
